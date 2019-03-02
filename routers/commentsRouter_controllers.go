@@ -7,6 +7,24 @@ import (
 
 func init() {
 
+    beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:DESController"] = append(beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:DESController"],
+        beego.ControllerComments{
+            Method: "Get",
+            Router: `/3des/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:DESController"] = append(beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:DESController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/3des/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:MD5Controller"] = append(beego.GlobalControllerRouter["github.com/yangleijun/go-utils-server/controllers:MD5Controller"],
         beego.ControllerComments{
             Method: "Get",

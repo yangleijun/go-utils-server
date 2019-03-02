@@ -10,4 +10,5 @@ func init() {
 	beego.Include(&controllers.QRCodeController{})
 	beego.Include(&controllers.MessageController{})
 	beego.Include(&controllers.MD5Controller{})
+	beego.Include(&controllers.DESController{})
 }
